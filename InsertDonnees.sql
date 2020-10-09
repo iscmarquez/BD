@@ -74,3 +74,8 @@ INSERT INTO `portesouvertsgrasset`.`video`(`videoLink`,`description`,`date`,`idU
 VALUES("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>","Court-métrage | DEC2015 Télé et Cinéma | Pingouin",now(),"admin@gmail.com");
 INSERT INTO `portesouvertsgrasset`.`video`(`videoLink`,`description`,`date`,`idUser`)
 VALUES("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fEeFzsHEm8k\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>","Court-métrage | DEC2015 Télé et Cinéma | Pingouin",now(),"admin@gmail.com");
+
+
+
+
+

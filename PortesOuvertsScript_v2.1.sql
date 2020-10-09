@@ -140,7 +140,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`Inscription` (
   `mail` VARCHAR(255) NOT NULL,
-  `idEvent` INT NOT NULL,
   `firstName` VARCHAR(255) NOT NULL,
   `lastName` VARCHAR(255) NOT NULL,
   `country` VARCHAR(100) NOT NULL,
@@ -251,11 +250,11 @@ ENGINE = InnoDB;
 -- Table `PortesOuvertsGrasset`.`InterestingProgrammes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`InterestingProgrammes` (
-  `idInscription` VARCHAR(255) NOT NULL,
+  `mail` VARCHAR(255) NOT NULL,
   `idProgram` INT NOT NULL,
-  PRIMARY KEY (`idInscription`, `idProgram`),
+  PRIMARY KEY (`mail`, `idProgram`),
   CONSTRAINT `Inscription_Interesting`
-    FOREIGN KEY (`idInscription`)
+    FOREIGN KEY (`mail`)
     REFERENCES `PortesOuvertsGrasset`.`Inscription` (`mail`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,

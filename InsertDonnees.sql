@@ -64,10 +64,10 @@ VALUES("Laurence Goudin-Desphelippon","Enseignent du francais","\\images\speaker
 
 
 -- ! Insert de conferences d'exemple
-INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`idSpeaker`,`linkConference`,`date`,`idUser`)
-VALUES("Intro DEC Informatique",1,1,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
-INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`idSpeaker`,`linkConference`,`date`,`idUser`)
-VALUES("Information général",1,2,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
+INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`fin`,`idSpeaker`,`linkConference`,`date`,`idUser`)
+VALUES("Intro DEC Informatique",1,"10:00", "11:00",1,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
+INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`fin`,`idSpeaker`,`linkConference`,`date`,`idUser`)
+VALUES("Information général",1,"11:00", "12:00",2,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
 
 -- ! Insert de videos d'exemple
 INSERT INTO `portesouvertsgrasset`.`video`(`videoLink`,`description`,`date`,`idUser`)

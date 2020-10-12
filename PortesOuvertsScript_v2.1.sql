@@ -66,26 +66,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PortesOuvertsGrasset`.`Video`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`Video` (
-  `idVideo` INT NOT NULL AUTO_INCREMENT,
-  `videoLink` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(100) NOT NULL,
-  `date` DATETIME NOT NULL,
-  `idUser` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`idVideo`),
-  CONSTRAINT `User_Video`
-    FOREIGN KEY (`idUser`)
-    REFERENCES `PortesOuvertsGrasset`.`User` (`email`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
 -- Table `PortesOuvertsGrasset`.`Downloadable`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`Downloadable` (
@@ -124,6 +104,9 @@ CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`Configuration` (
   `linkVirtualVisit` VARCHAR(255) NOT NULL,
   `linkFAQ` VARCHAR(255) NOT NULL,
   `endMessage` VARCHAR(255) NOT NULL,
+  `noEvent` VARCHAR(255) NOT NULL,
+   `video1` VARCHAR(255) NOT NULL,
+    `video2` VARCHAR(255) NOT NULL,
   `date` DATETIME NOT NULL,
   `idUser` VARCHAR(255) NOT NULL,
   CONSTRAINT `User_Configuration`
@@ -181,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `PortesOuvertsGrasset`.`Conference` (
   `idEvent` INT NOT NULL,
   `idSpeaker` INT NOT NULL,
   `start` VARCHAR(5) NOT NULL,
-  `fin` VARCHAR(5) NOT NULL,
+  `end` VARCHAR(5) NOT NULL,
   `linkConference` VARCHAR(255) NOT NULL,
   `date` DATETIME NOT NULL,
   `idUser` VARCHAR(255) NOT NULL,

@@ -8,8 +8,14 @@ INSERT INTO `portesouvertsgrasset`.`user`(`username`,`email`,`password`,`rol`)
 VALUES("Admissions","catherine@grasset.qc.ca","12345!","Clavardeur");
 
 -- ! Insert de la configuration 
-INSERT INTO `portesouvertsgrasset`.`configuration`(`linkVirtualVisit`,`linkFAQ`,`endMessage`,`date`,`idUser`)
-VALUES("https://www.institut-grasset.qc.ca/contactez-nous/","https://www.institut-grasset.qc.ca/contactez-nous/ ","Fin de l'événement des portes ouverts de l'institut Grasset",now(),"admin@gmail.com");
+INSERT INTO `portesouvertsgrasset`.`configuration`(`linkVirtualVisit`,`linkFAQ`,`endMessage`,`noEvent`,`video1`,`video2`,`date`,`idUser`)
+VALUES("https://www.institut-grasset.qc.ca/contactez-nous/","https://www.institut-grasset.qc.ca/contactez-nous/ ",
+"Fin de l'événement des portes ouverts de l'institut Grasset",
+"Aujourdh'ui il n' y a pas evenement", 
+"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+now(),
+"admin@gmail.com");
 
 
 -- ! Insert des programmes
@@ -64,16 +70,12 @@ VALUES("Laurence Goudin-Desphelippon","Enseignent du francais","\\images\speaker
 
 
 -- ! Insert de conferences d'exemple
-INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`fin`,`idSpeaker`,`linkConference`,`date`,`idUser`)
+INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`end`,`idSpeaker`,`linkConference`,`date`,`idUser`)
 VALUES("Intro DEC Informatique",1,"10:00", "11:00",1,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
-INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`fin`,`idSpeaker`,`linkConference`,`date`,`idUser`)
+INSERT INTO `portesouvertsgrasset`.`conference`(`nameConference`,`idEvent`,`start`,`end`,`idSpeaker`,`linkConference`,`date`,`idUser`)
 VALUES("Information général",1,"11:00", "12:00",2,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
 
--- ! Insert de videos d'exemple
-INSERT INTO `portesouvertsgrasset`.`video`(`videoLink`,`description`,`date`,`idUser`)
-VALUES("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>","Court-métrage | DEC2015 Télé et Cinéma | Pingouin",now(),"admin@gmail.com");
-INSERT INTO `portesouvertsgrasset`.`video`(`videoLink`,`description`,`date`,`idUser`)
-VALUES("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fEeFzsHEm8k\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>","Court-métrage | DEC2015 Télé et Cinéma | Pingouin",now(),"admin@gmail.com");
+
 
 
 

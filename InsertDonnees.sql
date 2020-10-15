@@ -1,4 +1,4 @@
-USE `instit43_jpo_test_1.0`;
+USE `instit43_jpo_test_2.0`;
 -- ! Insert des utilisateurs
 INSERT INTO `user`(`username`,`email`,`password`,`rol`)
 VALUES("Admin","admin@gmail.com","12345!","Administrateur");

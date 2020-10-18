@@ -1,17 +1,17 @@
-USE `instit43_jpo_test_2.0`;
+USE `instit43_jpo_test`;
 -- ! Insert des utilisateurs
 INSERT INTO `user`(`username`,`email`,`password`,`rol`)
 VALUES("Admin","admin@gmail.com","12345!","Administrateur");
-INSERT INTO `user`(`username`,`email`,`password`,`rol`)
-VALUES("Nicole Boyer","nicole@grasset.qc.ca","12345!","Clavardeur");
-INSERT INTO `user`(`username`,`email`,`password`,`rol`)
-VALUES("Admissions","catherine@grasset.qc.ca","12345!","Clavardeur");
 
 -- ! Insert de la configuration 
-INSERT INTO `configuration`(`linkVirtualVisit`,`linkFAQ`,`endMessage`,`noEvent`,`video1`,`video2`,`date`,`idUser`)
-VALUES("https://www.institut-grasset.qc.ca/contactez-nous/","https://www.institut-grasset.qc.ca/contactez-nous/ ",
+INSERT INTO `configuration`(`linkVirtualVisit`,`linkFAQ`,`endMessage`,`welcomeTitle`,`welcomeSubTitle`,`welcomeText`,`noEvent`,`video1`,`video2`,`date`,`idUser`)
+VALUES("https://www.institut-grasset.qc.ca/contactez-nous/",
+"https://www.institut-grasset.qc.ca/contactez-nous/ ",
 "Fin de l'événement des portes ouverts de l'institut Grasset",
-"Aujourdh'ui il n' y a pas evenement", 
+"Bienvenu au sitio web des Portes Ouverts de l'Institut Grasset ",
+" ",
+"Bienvenue au site de portes ouverts de l&apos;institut Grasset. Voulez-vous gagner un cadeau? <strong>Cliquer sur ce lien</strong>&nbsp;<a href=\"https://zoom.us/j/91419152334?pwd=MjZBNDZNY203RmdzSGpPdU83SFZQZz09\">https://zoom.us/j/91419152334?pwd=MjZBNDZN", 
+"Erreur",
 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4xfuNWoZbW8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
 now(),
@@ -64,9 +64,9 @@ VALUES("\\images\images\dec1.jpg","\images\documents\Fiche DECtechnique informat
 
 -- ! Insert de speakers d'exemple 
 INSERT INTO `speaker`(`name`,`description`,`chat`,`photoLink`,`linkchat`,`idUser`)
-VALUES("Nicolas Garou","Cordinateur du programa d'Informatique",true,"lien du chat","\\images\speaker\image1.jpg","admin@gmail.com");
+VALUES("Nicolas Garou","Cordinateur du programa d'Informatique",true,"lien du chat","/images/speaker/inconnu.png","admin@gmail.com");
 INSERT INTO `speaker`(`name`,`description`,`chat`,`photoLink`,`linkchat`,`idUser`)
-VALUES("Laurence Goudin-Desphelippon","Enseignent du francais",true,"lien du chat","\\images\speaker\image2.jpg","admin@gmail.com");
+VALUES("Laurence Goudin-Desphelippon","Enseignent du francais",true,"lien du chat","/images/speaker/girl.png","admin@gmail.com");
 
 
 -- ! Insert de conferences d'exemple
@@ -74,6 +74,14 @@ INSERT INTO `conference`(`nameConference`,`idEvent`,`start`,`end`,`idSpeaker`,`l
 VALUES("Intro DEC Informatique",1,"10:00", "11:00",1,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
 INSERT INTO `conference`(`nameConference`,`idEvent`,`start`,`end`,`idSpeaker`,`linkConference`,`date`,`idUser`)
 VALUES("Information général",1,"11:00", "12:00",2,"https://us04web.zoom.us/j/75020716883?pwd=QW14emdnZXlzUzZoOG1PYW50VDhIZz09",now(),"admin@gmail.com");
+
+INSERT INTO `inscription`(`mail`,`firstName`,`lastName`,`country`,`state`,`phone`,`moyenCommunication`,`consentMessage`,`date`)
+VALUES("user2@gmail.com","Conrado","Bhering","Canada","Quebec","438 525-8453","web",1,now());
+
+INSERT INTO `interestingprogrammes`(`mail`,`idProgram`)
+VALUES("user2@gmail.com",1);
+INSERT INTO `interestingprogrammes`(`mail`,`idProgram`)
+VALUES("user2@gmail.com",4);
 
 
 
